@@ -18,6 +18,10 @@ First, pull in the package through Composer.
 	"bpocallaghan/alert": "1.*"
 }
 ```
+OR 
+```bash
+composer require bpocallaghan/alert
+```
 
 Include the service provider within `config\app.php`.
 
