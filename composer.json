@@ -1,0 +1,24 @@
+{
+    "name": "bpocallaghan/alert",
+    "description": "A helper package to flash a bootstrap alert to the browser.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben-Piet O'Callaghan",
+            "email": "bpocallaghan@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bpocallaghan\\Alert\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
