@@ -1,6 +1,6 @@
-# Alert Box
+# Alert Box (Laravel)
 
-A helper package to flash a bootstrap alert to the browser via an Facade or a helper function.
+A helper package to flash a bootstrap alert to the browser via a Facade or a helper function.
 
 ```html
 <div class="alert alert-info fade in">
@@ -19,15 +19,15 @@ First, pull in the package through Composer.
 }
 ```
 
-Include the service provider within `app/config/app.php`.
+Include the service provider within `config\app.php`.
 
 ```php
 'providers' => [
-	'Bpocallaghan\Alert\AlertServiceProvider',
+	Bpocallaghan\Alert\AlertServiceProvider::class,
 ];
 ```
 
-And, for convenience, add a facade alias:
+Add a facade alias or use the globel helper function `alert()`.
 
 ```php
 'aliases' => [
@@ -43,15 +43,17 @@ Within any view file.
 @include('alert::alert')
 ```
 
-Within your controllers, before you return the view...
+Within any Controller.
 
 ```php
 public function index()
 {
     // helper function - default to the 'info'
 	alert('Title', 'Lorem Ipsum');
+	
 	// return object first
 	alert()->info('Title', 'Lorem Ipsum');
+	
 	// via the facade
     Alert::info('Title', 'Lorem Ipsum');
 	
@@ -67,17 +69,17 @@ The different 'levels' are:
 
 The different arguments:
 - `Alert::info('Title', 'Lorem Ipsum', false);` // without the icon
-- `Alert::info('Title', 'Lorem Ipsum', 'smile-o');` // custom icon
-- `Alert::message('Title', 'Lorem Ipsum', 'smile-o', 'info');` // specify the level
+- `Alert::info('Title', 'Lorem Ipsum', 'smile-o');` // specify the icon class
+- `Alert::message('Title', 'Lorem Ipsum', 'smile-o', 'info');` // specify the type of level
 - `Alert::message('Title', 'Lorem Ipsum', 'smile-o', 'info', false);` // do not show the 'close' button
 
-If you need to modify the partials, you can run:
+If you need to modify the view partial, you can run:
 
 ```bash
 php artisan vendor:publish --provider="Bpocallaghan\Alert\AlertServiceProvider"
 ```
 
-The view partial can be found here 'resources/views/vendor/alert/alert.blade'.
+The view partial can be found here 'resources\views\vendor\alert\alert.blade'.
 
 ## TODO
 
@@ -94,4 +96,8 @@ The view partial can be found here 'resources/views/vendor/alert/alert.blade'.
 ## Note
 
 Please keep in mind this is for my personal workflow and might not help you. 
-I developed this to help speed up my day to day workflow.
+I developed this to help speed up my day to day workflow. Thank you for understanding.
+
+## My other Packages
+
+- [Generate Files](https://github.com/bpocallaghan/generators)
