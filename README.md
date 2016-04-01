@@ -35,7 +35,7 @@ Add a facade alias or use the globel helper function `alert()`.
 
 ```php
 'aliases' => [
-	'Alert' => Bpocallaghan\Alert\Facades\Alert:class,
+	'Alert' => Bpocallaghan\Alert\Facades\Alert::class,
 ];
 ```
 
