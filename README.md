@@ -31,7 +31,7 @@ Add a facade alias or use the globel helper function `alert()`.
 
 ```php
 'aliases' => [
-	'Alert' => 'Bpocallaghan\Alert\Facades\Alert',
+	'Alert' => Bpocallaghan\Alert\Facades\Alert:class,
 ];
 ```
 
@@ -62,16 +62,16 @@ public function index()
 ```
 
 The different 'levels' are:
-- `Alert::info('Title', 'Lorem Ipsum');`
-- `Alert::success('Title', 'Lorem Ipsum');`
-- `Alert::warning('Title', 'Lorem Ipsum');`
-- `Alert::error('Title', 'Lorem Ipsum');`
+- `alert()->info('Title', 'Lorem Ipsum');`
+- `alert()->success('Title', 'Lorem Ipsum');`
+- `alert()->warning('Title', 'Lorem Ipsum');`
+- `alert()->error('Title', 'Lorem Ipsum');`
 
 The different arguments:
-- `Alert::info('Title', 'Lorem Ipsum', false);` // without the icon
-- `Alert::info('Title', 'Lorem Ipsum', 'smile-o');` // specify the icon class
-- `Alert::message('Title', 'Lorem Ipsum', 'smile-o', 'info');` // specify the type of level
-- `Alert::message('Title', 'Lorem Ipsum', 'smile-o', 'info', false);` // do not show the 'close' button
+- `alert()->info('Title', 'Lorem Ipsum', false);` // without the icon
+- `alert()->info('Title', 'Lorem Ipsum', 'smile-o');` // specify the icon class
+- `alert()->message('Title', 'Lorem Ipsum', 'smile-o', 'info');` // specify the type of level
+- `alert()->message('Title', 'Lorem Ipsum', 'smile-o', 'info', false);` // do not show the 'close' button
 
 If you need to modify the view partial, you can run:
 
@@ -79,7 +79,7 @@ If you need to modify the view partial, you can run:
 php artisan vendor:publish --provider="Bpocallaghan\Alert\AlertServiceProvider"
 ```
 
-The view partial can be found here 'resources\views\vendor\alert\alert.blade'.
+The view partial can be found here `resources\views\vendor\alert\alert.blade`.
 
 ## TODO
 
@@ -100,4 +100,4 @@ I developed this to help speed up my day to day workflow. Thank you for understa
 
 ## My other Packages
 
-- [Generate Files](https://github.com/bpocallaghan/generators)
+- [Laravel custom Generate Files with a config file and publishable stubs](https://github.com/bpocallaghan/generators)
