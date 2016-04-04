@@ -9,6 +9,9 @@ A helper package to flash a bootstrap alert to the browser via a Facade or a hel
 </div>
 ```
 
+###Interested in a starter project where the current package are being used.
+###[Laravel Starter Project](https://github.com/bpocallaghan/laravel-admin-starter)
+
 ## Installation
 
 First, pull in the package through Composer.
