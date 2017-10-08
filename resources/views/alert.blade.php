@@ -7,6 +7,6 @@
             <i class="fa-fw fa fa-{{ session('alert.icon') }}"></i>
         @endif
         <strong>{{ session('alert.title') }}</strong>
-        {{ session('alert.content') }}
+        {!! session('alert.content') !!}
     </div>
 @endif
