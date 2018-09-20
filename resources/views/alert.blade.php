@@ -19,9 +19,9 @@
             @if (session('alert.title'))
                 setTimeout(function() {
                     $(".alert.in.show").fadeTo(2000, 0).slideUp(500, function(){
-                        $(".alert").slideUp(500);
+                        $(this).removeClass('in').removeClass('show').addClass('hide');
                     });
-                }, 2000);
+                }, 5000);
             @endif
         })
     </script>
