@@ -34,16 +34,16 @@ if (!function_exists('alert_icon')) {
     {
         switch ($level) {
             case 'danger':
-                return 'times';
+                return 'fas fa-fw fa-times';
                 break;
             case 'warning':
-                return 'warning';
+                return 'fas fa-fw fa-warning';
                 break;
             case 'success':
-                return 'check';
+                return 'fas fa-fw fa-check';
                 break;
             default: // info / default
-                return 'info';
+                return 'fas fa-fw fa-info';
                 break;
         }
     }
