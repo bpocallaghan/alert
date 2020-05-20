@@ -4,7 +4,7 @@
             <button type="button" class="close" data-dismiss="alert">&times;</button>
         @endif
         @if (session('alert.icon'))
-            <i class="fa-fw fa fa-{{ session('alert.icon') }}"></i>
+            <i class="{{ session('alert.icon') }}"></i>
         @endif
         <strong>{{ session('alert.title') }}</strong>
         {!! session('alert.content') !!}
