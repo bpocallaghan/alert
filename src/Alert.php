@@ -18,7 +18,7 @@ class Alert
      *
      * @param Store $session
      */
-    function __construct(Store $session)
+    public function __construct(Store $session)
     {
         $this->session = $session;
     }
@@ -49,6 +49,16 @@ class Alert
      * @param bool|string $icon
      */
     public function error($title, $content = '', $icon = true)
+    {
+        $this->message($title, $content, $icon, 'danger');
+    }
+
+    /**
+     * @param             $title
+     * @param             $content
+     * @param bool|string $icon
+     */
+    public function danger($title, $content = '', $icon = true)
     {
         $this->message($title, $content, $icon, 'danger');
     }

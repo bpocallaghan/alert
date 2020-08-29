@@ -21,7 +21,7 @@ First, pull in the package through Composer.
 	"bpocallaghan/alert": "1.*"
 }
 ```
-OR 
+OR
 ```bash
 composer require bpocallaghan/alert
 ```
@@ -57,13 +57,13 @@ public function index()
 {
     // helper function - default to the 'info'
 	alert('Title', 'Lorem Ipsum');
-	
+
 	// return object first
 	alert()->info('Title', 'Lorem Ipsum');
-	
+
 	// via the facade
     Alert::info('Title', 'Lorem Ipsum');
-	
+
 	return view('home');
 }
 ```
@@ -72,7 +72,7 @@ The different 'levels' are:
 - `alert()->info('Title', 'Lorem Ipsum');`
 - `alert()->success('Title', 'Lorem Ipsum');`
 - `alert()->warning('Title', 'Lorem Ipsum');`
-- `alert()->error('Title', 'Lorem Ipsum');`
+- `alert()->danger('Title', 'Lorem Ipsum');`
 
 The different arguments:
 - `alert()->info('Title', 'Lorem Ipsum', false);` // without the icon
@@ -102,7 +102,7 @@ The view partial can be found here `resources\views\vendor\alert\alert.blade`.
 
 ## Note
 
-Please keep in mind this is for my personal workflow and might not help you. 
+Please keep in mind this is for my personal workflow and might not help you.
 I developed this to help speed up my day to day workflow. Thank you for understanding.
 
 ## My other Packages
