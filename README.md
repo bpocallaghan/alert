@@ -26,22 +26,6 @@ OR
 composer require bpocallaghan/alert
 ```
 
-Include the service provider within `config\app.php`.
-
-```php
-'providers' => [
-	Bpocallaghan\Alert\AlertServiceProvider::class,
-];
-```
-
-Add a facade alias or use the globel helper function `alert()`.
-
-```php
-'aliases' => [
-	'Alert' => Bpocallaghan\Alert\Facades\Alert::class,
-];
-```
-
 ## Usage
 
 Within any view file.
