@@ -77,8 +77,9 @@ The different 'levels' are:
 The different arguments:
 - `alert()->info('Title', 'Lorem Ipsum', false);` // without the icon
 - `alert()->info('Title', 'Lorem Ipsum', 'smile-o');` // specify the icon class
-- `alert()->message('Title', 'Lorem Ipsum', 'smile-o', 'info');` // specify the type of level
-- `alert()->message('Title', 'Lorem Ipsum', 'smile-o', 'info', false);` // do not show the 'close' button
+- `alert()->info('Title', 'Lorem Ipsum', 'smile-o', true);` // limit alert to the request lifecycle
+- `alert()->message('Title', 'Lorem Ipsum', 'smile-o', true, 'info');` // specify the type of level
+- `alert()->message('Title', 'Lorem Ipsum', 'smile-o', true, 'info', false);` // do not show the 'close'
 
 If you need to modify the view partial, you can run:
 
