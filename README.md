@@ -79,7 +79,6 @@ The view partial can be found here `resources\views\vendor\alert\alert.blade`.
 - Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
 
 - [laracasts/flash](https://github.com/laracasts/flash)
-- [Learn exactly how to build this very package on Laracasts!](https://laracasts.com/lessons/flexible-flash-messages)
 
 ## My other Packages
 
