@@ -73,11 +73,7 @@ php artisan vendor:publish --provider="Bpocallaghan\Alert\AlertServiceProvider"
 
 The view partial can be found here `resources\views\vendor\alert\alert.blade`.
 
-## TODO
-
-- Add an autohide / timeout option
-
-## Tank you
+## Thank you
 
 - Thank you [Jeffrey Way](https://github.com/JeffreyWay) for the awesome resources at [Laracasts](https://laracasts.com/).
 - Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
