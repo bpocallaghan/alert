@@ -85,11 +85,6 @@ The view partial can be found here `resources\views\vendor\alert\alert.blade`.
 - [laracasts/flash](https://github.com/laracasts/flash)
 - [Learn exactly how to build this very package on Laracasts!](https://laracasts.com/lessons/flexible-flash-messages)
 
-## Note
-
-Please keep in mind this is for my personal workflow and might not help you.
-I developed this to help speed up my day to day workflow. Thank you for understanding.
-
 ## My other Packages
 
 - [Laravel custom Generate Files with a config file and publishable stubs](https://github.com/bpocallaghan/generators)
