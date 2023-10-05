@@ -73,11 +73,6 @@ php artisan vendor:publish --provider="Bpocallaghan\Alert\AlertServiceProvider"
 
 The view partial can be found here `resources\views\vendor\alert\alert.blade`.
 
-## Thank you
-
-- Thank you [Jeffrey Way](https://github.com/JeffreyWay) for the awesome resources at [Laracasts](https://laracasts.com/).
-- Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
-
 ## My other Packages
 
 - [Laravel custom Generate Files with a config file and publishable stubs](https://github.com/bpocallaghan/generators)
