@@ -78,8 +78,6 @@ The view partial can be found here `resources\views\vendor\alert\alert.blade`.
 - Thank you [Jeffrey Way](https://github.com/JeffreyWay) for the awesome resources at [Laracasts](https://laracasts.com/).
 - Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
 
-- [laracasts/flash](https://github.com/laracasts/flash)
-
 ## My other Packages
 
 - [Laravel custom Generate Files with a config file and publishable stubs](https://github.com/bpocallaghan/generators)
