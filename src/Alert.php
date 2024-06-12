@@ -28,9 +28,9 @@ class Alert
      * @param             $content
      * @param bool|string $icon
      */
-    public function info($title, $content = '', $icon = true, $showOnce = false)
+    public function info($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
     {
-        $this->message($title, $content, $icon, $showOnce, 'info');
+        $this->message($title, $content, $icon, $showOnce, 'info', $close, $timeout);
     }
 
     /**
@@ -38,9 +38,9 @@ class Alert
      * @param             $content
      * @param bool|string $icon
      */
-    public function success($title, $content = '', $icon = true, $showOnce = false)
+    public function success($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
     {
-        $this->message($title, $content, $icon, $showOnce, 'success');
+        $this->message($title, $content, $icon, $showOnce, 'success', $close, $timeout);
     }
 
     /**
@@ -48,9 +48,9 @@ class Alert
      * @param             $content
      * @param bool|string $icon
      */
-    public function error($title, $content = '', $icon = true, $showOnce = false)
+    public function error($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
     {
-        $this->message($title, $content, $icon, $showOnce, 'danger');
+        $this->message($title, $content, $icon, $showOnce, 'danger', $close, $timeout);
     }
 
     /**
@@ -58,9 +58,9 @@ class Alert
      * @param             $content
      * @param bool|string $icon
      */
-    public function danger($title, $content = '', $icon = true, $showOnce = false)
+    public function danger($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
     {
-        $this->message($title, $content, $icon, $showOnce, 'danger');
+        $this->message($title, $content, $icon, $showOnce, 'danger', $close, $timeout);
     }
 
     /**
@@ -68,9 +68,9 @@ class Alert
      * @param             $content
      * @param bool|string $icon
      */
-    public function warning($title, $content = '', $icon = true, $showOnce = false)
+    public function warning($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
     {
-        $this->message($title, $content, $icon, $showOnce, 'warning');
+        $this->message($title, $content, $icon, $showOnce, 'warning', $close, $timeout);
     }
 
     /**
@@ -80,18 +80,20 @@ class Alert
      * @param string      $level
      * @param bool        $close
      */
-    public function message($title, $content, $icon, $showOnce, $level = 'info', $close = true)
+    public function message($title, $content, $icon, $showOnce, $level = 'info', $close = true, $timeout = 5000)
     {
         if($showOnce){
             $this->session->now('alert.title', $title);
             $this->session->now('alert.content', $content);
             $this->session->now('alert.level', $level);
             $this->session->now('alert.close', $close);
+            $this->session->now('alert.timeout', $timeout);
         } else {
             $this->session->flash('alert.title', $title);
             $this->session->flash('alert.content', $content);
             $this->session->flash('alert.level', $level);
             $this->session->flash('alert.close', $close);
+            $this->session->flash('alert.timeout', $timeout);
         }
         // if icon == true, get icon from level, else if icon is string, set icon
         if ((is_bool($icon) && $icon == true) || strlen($icon) > 1) {

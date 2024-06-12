@@ -16,12 +16,12 @@
     <script type="text/javascript" charset="utf-8">
         $(function () {
             // fade out alert after 5sec
-            @if (session('alert.title'))
+            @if (session('alert.title') && session('alert.timout') && session('alert.timout') > 0)
                 setTimeout(function() {
                     $(".alert.in.show").fadeTo(2000, 0).slideUp(500, function(){
                         $(this).removeClass('in').removeClass('show').addClass('hide');
                     });
-                }, 5000);
+                }, session('alert.timout'));
             @endif
         })
     </script>
