@@ -21,7 +21,7 @@
                     $(".alert.in.show").fadeTo(2000, 0).slideUp(500, function(){
                         $(this).removeClass('in').removeClass('show').addClass('hide');
                     });
-                }, session('alert.timeout'));
+                }, {{session('alert.timeout')}});
             @endif
         })
     </script>
