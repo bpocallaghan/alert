@@ -77,6 +77,56 @@ class Alert
      * @param             $title
      * @param             $content
      * @param bool|string $icon
+     */
+    public function primary($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
+    {
+        $this->message($title, $content, $icon, $showOnce, 'primary', $close, $timeout);
+    }
+
+    /**
+     * @param             $title
+     * @param             $content
+     * @param bool|string $icon
+     */
+    public function secondary($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
+    {
+        $this->message($title, $content, $icon, $showOnce, 'secondary', $close, $timeout);
+    }
+
+    /**
+     * @param             $title
+     * @param             $content
+     * @param bool|string $icon
+     */
+    public function notice($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
+    {
+        $this->message($title, $content, $icon, $showOnce, 'notice', $close, $timeout);
+    }
+
+    /**
+     * @param             $title
+     * @param             $content
+     * @param bool|string $icon
+     */
+    public function light($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
+    {
+        $this->message($title, $content, $icon, $showOnce, 'light', $close, $timeout);
+    }
+
+    /**
+     * @param             $title
+     * @param             $content
+     * @param bool|string $icon
+     */
+    public function dark($title, $content = '', $icon = true, $showOnce = false, $close = true, $timeout = 5000)
+    {
+        $this->message($title, $content, $icon, $showOnce, 'dark', $close, $timeout);
+    }
+
+    /**
+     * @param             $title
+     * @param             $content
+     * @param bool|string $icon
      * @param string      $level
      * @param bool        $close
      */
