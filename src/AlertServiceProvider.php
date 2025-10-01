@@ -34,7 +34,6 @@ class AlertServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // singleton
         $this->app->singleton('alert', function () {
             return $this->app->make(Alert::class);
         });

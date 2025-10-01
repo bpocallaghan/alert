@@ -95,6 +95,7 @@ class Alert
             $this->session->flash('alert.close', $close);
             $this->session->flash('alert.timeout', $timeout);
         }
+
         // if icon == true, get icon from level, else if icon is string, set icon
         if ((is_bool($icon) && $icon == true) || strlen($icon) > 1) {
             $icon = is_string($icon) ? $icon : alert_icon($level);
